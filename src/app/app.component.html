@@ -1,0 +1,7 @@
+<div class="container" #container (scroll)="onScroll($event)">
+  <div class="box" #box (click)="click()" (dblclick)="doubleClick()">
+    <div *ngIf="!isDouble && direction.length > 0">{{counter}}</div>
+    <div *ngIf="isDouble" class="stripes" [ngStyle]="{'background': background}"></div>
+  </div>
+</div>
+
